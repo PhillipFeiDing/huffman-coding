@@ -35,7 +35,7 @@ public class GUI extends Application {
      */
     public void start(Stage window) {
         this.window = window;
-        this.window.setTitle("Huffman 压缩/解压器2.0");
+        this.window.setTitle("Huffman Encoder/Decoder2.0");
         this.window.setResizable(false);
 
         Scene encodeScene = createEncodingScene();
@@ -49,20 +49,20 @@ public class GUI extends Application {
      */
     private Scene createEncodingScene() {
         // All Elements
-        Label title = new Label("Huffman 压缩器");
+        Label title = new Label("Huffman Encoder");
         StackPane titleWrapper = new StackPane();
         titleWrapper.getChildren().add(title);
         titleWrapper.setAlignment(Pos.CENTER);
 
         Label prompt1 = new Label(
-                "请输入需要压缩的文件的路径，");
+                "Input the path of file to encode.");
 
         Label prompt2 = new Label(
-                "目前的版本只支持 .txt 类型文件：");
+                "This version only supports .txt: ");
 
-        Label fromLabel = new Label("读取路径：");
+        Label fromLabel = new Label("Read from: ");
 
-        Label toLabel = new Label("存到目录：");
+        Label toLabel = new Label("Save to: ");
 
         TextField fromField = new TextField();
         this.fromField = fromField;
@@ -78,7 +78,7 @@ public class GUI extends Application {
 
         Label toExtension = new Label(DAT_EXTENSION);
 
-        Button encodeButton = new Button("压缩");
+        Button encodeButton = new Button("Encode");
         encodeButton.setMinWidth(140);
         encodeButton.setMaxWidth(140);
         encodeButton.setOnAction(e -> {
@@ -86,7 +86,7 @@ public class GUI extends Application {
             String to = this.toField.getText() + DAT_EXTENSION;
             encode(path, to);
         });
-        Button decodeButton = new Button("解压...");
+        Button decodeButton = new Button("To Decoder ...");
         decodeButton.setOnAction(e -> {
             window.setScene(createDecodingScene());
         });
@@ -133,14 +133,14 @@ public class GUI extends Application {
             message = FileIO.read(path);
         } catch (FileNotFoundException e) {
             AlertBox.display(
-                    "文件IO错误", "待压缩文件不存在。");
+                    "File Exception", "File not found.");
             return;
         } catch (IOException e) {
             message = null;
         }
         if (message == null) {
             AlertBox.display(
-                    "文件IO错误", "无法读取待压缩文件。");
+                    "File Exception", "Cannot read file.");
             return;
         }
 
@@ -159,10 +159,10 @@ public class GUI extends Application {
             scheme = null;
         }
         if (encoded == null || scheme == null) {
-            AlertBox.display("编码错误",
-                    "压缩器无法压缩此文件，"
-                            + "因为它是空的，\n"
-                            + "或者使用了未知的编码规则。");
+            AlertBox.display("Encoding Error",
+                    "The encoder cannot encode this file, "
+                            + "because it is empty, \n"
+                            + "Or it uses an unknown encoding rule.");
             return;
         }
 
@@ -176,12 +176,12 @@ public class GUI extends Application {
             ByteFileWriter.write(to, encoded, scheme, finalCut);
         } catch (IOException e) {
             AlertBox.display(
-                    "文件IO错误",
-                    "压缩文件写入失败。");
+                    "File Exception",
+                    "Failed to write encoded file.");
             return;
         }
 
-        AlertBox.display("完成", "文件已被成功压缩到指定路径下。");
+        AlertBox.display("Completed", "Encoded file has been successfully saved.");
     }
 
     /**
@@ -190,20 +190,20 @@ public class GUI extends Application {
      */
     private Scene createDecodingScene() {
         // All Elements
-        Label title = new Label("Huffman 解压器");
+        Label title = new Label("Huffman Decoder");
         StackPane titleWrapper = new StackPane();
         titleWrapper.getChildren().add(title);
         titleWrapper.setAlignment(Pos.CENTER);
 
         Label prompt1 = new Label(
-                "请输入需要解压文件的路径：");
+                "Input the path of file to decode.");
 
         Label prompt2 = new Label(
-                "目前的版本只支持 .dat 特殊类型文件：");
+                "This version only supports .dat: ");
 
-        Label fromLabel = new Label("读取路径：");
+        Label fromLabel = new Label("Read from: ");
 
-        Label toLabel = new Label("存到目录：");
+        Label toLabel = new Label("Save to: ");
 
         TextField fromField = new TextField();
         this.fromField = fromField;
@@ -219,7 +219,7 @@ public class GUI extends Application {
 
         Label toExtension = new Label(TXT_EXTENSION);
 
-        Button decodeButton = new Button("解压");
+        Button decodeButton = new Button("Decode");
         decodeButton.setMinWidth(140);
         decodeButton.setMaxWidth(140);
         decodeButton.setOnAction(e -> {
@@ -227,7 +227,7 @@ public class GUI extends Application {
             String to = this.toField.getText() + TXT_EXTENSION;
             decode(path, to);
         });
-        Button encodeButton = new Button("压缩...");
+        Button encodeButton = new Button("To Encoder ...");
         encodeButton.setOnAction(e -> {
             window.setScene(createEncodingScene());
         });
@@ -273,18 +273,18 @@ public class GUI extends Application {
             s = decoder.decode();
         } catch (FileNotFoundException e) {
             AlertBox.display(
-                    "文件IO错误", "待解压文件不存在。");
+                    "File Exception", "File not found");
             return;
         } catch (IOException e) {
             s = null;
         } catch (IllegalArgumentException e) {
             AlertBox.display(
-                    "解码错误", e.getMessage());
+                    "Decoder Exception", e.getMessage());
             return;
         }
         if (s == null) {
             AlertBox.display(
-                    "文件IO错误", "无法读取待解压文件。");
+                    "File Exception", "Cannot read file.");
             return;
         }
 
@@ -297,12 +297,12 @@ public class GUI extends Application {
             FileIO.write(to, s);
         } catch (IOException e) {
             AlertBox.display(
-                    "文件IO错误",
-                    "解压文件写入失败。" + "\n请检查目录是否存在。");
+                    "File Exception",
+                    "Failed to write decoded file, " + "\nplease check if the folder exists.");
             return;
         }
 
-        AlertBox.display("完成", "文件已被成功解压到指定目录下");
+        AlertBox.display("Completed", "Decoded file has been successfully saved.");
     }
 
     /**
@@ -313,8 +313,8 @@ public class GUI extends Application {
     private boolean overwrite(String to) {
         File file = new File(to);
         if (file.exists()) {
-            return ConfirmBox.display("警告", "文件\""
-                    + to + "\"已经存在。\n确定要覆盖吗？");
+            return ConfirmBox.display("Warning", "File \""
+                    + to + "\" exists. \nAre you sure to overwrite?");
         }
         return true;
     }

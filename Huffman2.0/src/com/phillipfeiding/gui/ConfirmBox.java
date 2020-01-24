@@ -45,8 +45,8 @@ public class ConfirmBox {
         label.setText(message);
 
         // create two buttons;
-        Button yesButton = new Button("是");
-        Button noButton = new Button("否");
+        Button yesButton = new Button("Yes");
+        Button noButton = new Button("No");
 
         // assign functionality to the two buttons;
         yesButton.setOnAction(e -> {

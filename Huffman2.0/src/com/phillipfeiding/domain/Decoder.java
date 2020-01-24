@@ -19,8 +19,8 @@ public class Decoder {
     private int finalCut;
     private boolean[] cache;
     private static final String ERR_MSG =
-            "给定文件不是由配套压缩器压缩的，\n"
-            + "或者其内容被修改了。";
+            "Given file is not produced by this encoder, \n"
+            + "or its contents have changed.";
 
     /**
      * Constructor
@@ -28,7 +28,7 @@ public class Decoder {
      */
     public Decoder(byte[] raw) {
         if (raw == null) {
-            throw new IllegalArgumentException("给定文件可能是空的，无法解压空文件。");
+            throw new IllegalArgumentException("Given file is empty. Cannot decode file.");
         }
 
         int index = findZero(raw);
