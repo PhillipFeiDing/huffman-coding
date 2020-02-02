@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title>Huffman Algorithm</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="outer-wrapper center">
+            <p class="app-title center">Huffman Encoder/Decoder</p>
+            <div class="main-wrapper center">
+                <p class="mode-wrapper center">
+                    <span>Mode: </span>
+                    <span id="mode-select" class="encode-mode">Encode</span>   
+                </p>
+                <div class="upper-wrapper center">
+                    <p class="prompt float" id="prompt-left">Original Text</p>
+                    <div class="toggle-wrapper float">
+                        <input type="button" value="Toggle"/>
+                    </div>
+                    <p class="prompt float" id="prompt-right">Encrypted Bits</p>
+                    <div class="clear-float"></div>
+                </div>
+                <div class="lower-wrapper center">
+                    <div class="text-wrapper float">
+                        <div class="text-wrapper-inner">
+                            <textarea id="left-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-wrapper float">
+                        <div class="text-wrapper-inner">
+                            <textarea id="right-textarea" disabled></textarea>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </div>
+                <div class="button-group-wrapper">
+                    <input type="button" value="Clear"/>
+                    <input type="button" value="Convert"/>
+                    <input type="button" value="Copy"/>
+                </div>
+                <div class="lower-wrapper center">
+                    <div class="text-wrapper float">
+                        <div class="text-wrapper-inner table-wrapper center">
+                            <p class="table-title">Frequency Chart</p>
+                            <table class="result-table center">
+                                <tr>
+                                    <th>Char</th>
+                                    <th>Freq</th>
+                                    <th>Char</th>
+                                    <th>Freq</th>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-0">&nbsp;</td>
+                                    <td id="freq-chart-freq-0">&nbsp;</td>
+                                    <td id="freq-chart-char-17">&nbsp;</td>
+                                    <td id="freq-chart-freq-17">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-1">&nbsp;</td>
+                                    <td id="freq-chart-freq-1">&nbsp;</td>
+                                    <td id="freq-chart-char-18">&nbsp;</td>
+                                    <td id="freq-chart-freq-18">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-2">&nbsp;</td>
+                                    <td id="freq-chart-freq-2">&nbsp;</td>
+                                    <td id="freq-chart-char-19">&nbsp;</td>
+                                    <td id="freq-chart-freq-19">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-3">&nbsp;</td>
+                                    <td id="freq-chart-freq-3">&nbsp;</td>
+                                    <td id="freq-chart-char-20">&nbsp;</td>
+                                    <td id="freq-chart-freq-20">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-4">&nbsp;</td>
+                                    <td id="freq-chart-freq-4">&nbsp;</td>
+                                    <td id="freq-chart-char-21">&nbsp;</td>
+                                    <td id="freq-chart-freq-21">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-5">&nbsp;</td>
+                                    <td id="freq-chart-freq-5">&nbsp;</td>
+                                    <td id="freq-chart-char-22">&nbsp;</td>
+                                    <td id="freq-chart-freq-22">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-6">&nbsp;</td>
+                                    <td id="freq-chart-freq-6">&nbsp;</td>
+                                    <td id="freq-chart-char-23">&nbsp;</td>
+                                    <td id="freq-chart-freq-23">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-7">&nbsp;</td>
+                                    <td id="freq-chart-freq-7">&nbsp;</td>
+                                    <td id="freq-chart-char-24">&nbsp;</td>
+                                    <td id="freq-chart-freq-24">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-8">&nbsp;</td>
+                                    <td id="freq-chart-freq-8">&nbsp;</td>
+                                    <td id="freq-chart-char-25">&nbsp;</td>
+                                    <td id="freq-chart-freq-25">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-9">&nbsp;</td>
+                                    <td id="freq-chart-freq-9">&nbsp;</td>
+                                    <td id="freq-chart-char-26">&nbsp;</td>
+                                    <td id="freq-chart-freq-26">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-10">&nbsp;</td>
+                                    <td id="freq-chart-freq-10">&nbsp;</td>
+                                    <td id="freq-chart-char-27">&nbsp;</td>
+                                    <td id="freq-chart-freq-27">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-11">&nbsp;</td>
+                                    <td id="freq-chart-freq-11">&nbsp;</td>
+                                    <td id="freq-chart-char-28">&nbsp;</td>
+                                    <td id="freq-chart-freq-28">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-12">&nbsp;</td>
+                                    <td id="freq-chart-freq-12">&nbsp;</td>
+                                    <td id="freq-chart-char-29">&nbsp;</td>
+                                    <td id="freq-chart-freq-29">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-13">&nbsp;</td>
+                                    <td id="freq-chart-freq-13">&nbsp;</td>
+                                    <td id="freq-chart-char-30">&nbsp;</td>
+                                    <td id="freq-chart-freq-30">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-14">&nbsp;</td>
+                                    <td id="freq-chart-freq-14">&nbsp;</td>
+                                    <td id="freq-chart-char-31">&nbsp;</td>
+                                    <td id="freq-chart-freq-31">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-15">&nbsp;</td>
+                                    <td id="freq-chart-freq-15">&nbsp;</td>
+                                    <td id="freq-chart-char-32">&nbsp;</td>
+                                    <td id="freq-chart-freq-32">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="freq-chart-char-16">&nbsp;</td>
+                                    <td id="freq-chart-freq-16">&nbsp;</td>
+                                    <td id="freq-chart-char-33">&nbsp;</td>
+                                    <td id="freq-chart-freq-33">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="text-wrapper float">
+                        <div class="text-wrapper-inner table-wrapper">
+                            <p class="table-title">Encoding Scheme</p>
+                            <table class="result-table center">
+                                <tr>
+                                    <th>Char</th>
+                                    <th>Code</th>
+                                    <th>Char</th>
+                                    <th>Code</th>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-0">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-0">&nbsp;</td>
+                                    <td id="encode-shceme-char-17">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-17">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-1">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-1">&nbsp;</td>
+                                    <td id="encode-shceme-char-18">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-18">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-2">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-2">&nbsp;</td>
+                                    <td id="encode-shceme-char-19">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-19">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-3">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-3">&nbsp;</td>
+                                    <td id="encode-shceme-char-20">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-20">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-4">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-4">&nbsp;</td>
+                                    <td id="encode-shceme-char-21">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-21">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-5">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-5">&nbsp;</td>
+                                    <td id="encode-shceme-char-22">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-22">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-6">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-6">&nbsp;</td>
+                                    <td id="encode-shceme-char-23">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-23">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-7">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-7">&nbsp;</td>
+                                    <td id="encode-shceme-char-24">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-24">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-8">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-8">&nbsp;</td>
+                                    <td id="encode-shceme-char-25">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-25">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-9">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-9">&nbsp;</td>
+                                    <td id="encode-shceme-char-26">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-26">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-10">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-10">&nbsp;</td>
+                                    <td id="encode-shceme-char-27">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-27">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-11">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-11">&nbsp;</td>
+                                    <td id="encode-shceme-char-28">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-28">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-12">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-12">&nbsp;</td>
+                                    <td id="encode-shceme-char-29">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-29">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-13">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-13">&nbsp;</td>
+                                    <td id="encode-shceme-char-30">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-30">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-14">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-14">&nbsp;</td>
+                                    <td id="encode-shceme-char-31">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-31">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-15">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-15">&nbsp;</td>
+                                    <td id="encode-shceme-char-32">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-32">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td id="encode-shceme-char-16">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-16">&nbsp;</td>
+                                    <td id="encode-shceme-char-33">&nbsp;</td>
+                                    <td id="encode-scheme-scheme-33">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

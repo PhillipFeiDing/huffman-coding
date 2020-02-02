@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.float {
+    float: left;
+}
+.clear-float {
+    clear: both;
+}
+input:focus, textarea:focus{
+    outline: none;
+}
+input[type="button"]:hover{
+    cursor: pointer;
+}
+.outer-wrapper {
+    margin-top: 10px;
+    width: 75%;
+    background: #dddddd;
+}
+.app-title {
+    font-size: 48px;
+    padding-top: 20px;
+}
+.encode-mode {
+    color: #007e00
+}
+.decode-mode {
+    color: #7e0000
+}
+.mode-wrapper {
+    font-size: 24px;
+    margin: 10px;
+}
+.upper-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+.lower-wrapper {
+    padding-bottom: 20px;
+}
+.prompt {
+    width: 40%;
+    font-size: 24px;
+    height: 100%;
+    line-height: 40px;
+    position: relative;
+}
+#prompt-left {
+    left: 5%;
+}
+#prompt-right {
+    right: 5%;
+}
+.toggle-wrapper {
+    width: 20%;
+}
+input[type="button"] {
+    font-size: 18px;
+    padding: 5px 40px 5px 40px;
+    border-radius: 20px;
+    color: #20b420;
+    font-style: italic;
+    height: 100%;
+}
+.text-wrapper {
+    width: 46%;
+    margin: 0 2% 0 2%;
+}
+.text-wrapper-inner {
+    border: 2px solid #555555;
+}
+.text-wrapper-inner > textarea {
+    margin: 2%;
+    height: 500px;
+    width: 96%;
+    font-size: 18px;
+    padding: 10px;
+}
+.button-group-wrapper {
+    margin-bottom: 20px;
+    height: 40px;
+}
+.button-group-wrapper > input[type="button"] {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+.table-wrapper {
+    height: 500px;
+    background: #cccccc;
+    border: none;
+}
+.table-title {
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.result-table {
+    border: 2px solid #bbbbbb;
+    padding: 10px;
+    width: 95%;
+    font-size: 18px;
+}
+.result-table th {
+    width: 20%;
+}
