@@ -21,7 +21,7 @@ input[type="button"]:hover{
 }
 .outer-wrapper {
     margin-top: 10px;
-    width: 75%;
+    width: 100%;
     background: #dddddd;
 }
 .app-title {
