@@ -35,7 +35,3 @@ class HashMap {
         return this.size === 0
     }
 }
-
-module.exports = {
-    HashMap
-}

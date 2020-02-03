@@ -23,31 +23,11 @@ class TreeNode {
         return this.right
     }
 
-    setLeft(left) {
-        this.left = left
+    setLeft(newLeft) {
+        this.left = newLeft
     }
 
-    setRight(right) {
-        this.right = right
+    setRight(newRight) {
+        this.right = newRight
     }
-
-    compareTo(other) {
-        if (this.count !== other.count) {
-            return this.count - other.count
-        }
-        if (this.symbol === null && other.symbol !== null) {
-            return 1
-        }
-        if (this.symbol !== null && other.symbol === null) {
-            return -1
-        }
-        if (this.symbol === null && other.symbol === null) {
-            return 0
-        }
-        return this.symbol.charCodeAt(0) - other.symbol.charCodeAt(0)
-    }
-}
-
-module.exports = {
-    TreeNode
 }

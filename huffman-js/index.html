@@ -14,7 +14,7 @@
                 <div class="upper-wrapper center">
                     <p class="prompt float" id="prompt-left">Original Text</p>
                     <div class="toggle-wrapper float">
-                        <input type="button" value="Toggle"/>
+                        <input type="button" value="Toggle" id="toggle-button"/>
                     </div>
                     <p class="prompt float" id="prompt-right">Encrypted Bits</p>
                     <div class="clear-float"></div>
@@ -27,15 +27,15 @@
                     </div>
                     <div class="text-wrapper float">
                         <div class="text-wrapper-inner">
-                            <textarea id="right-textarea" disabled></textarea>
+                            <textarea id="right-textarea" readonly></textarea>
                         </div>
                     </div>
                     <div class="clear-float"></div>
                 </div>
                 <div class="button-group-wrapper">
-                    <input type="button" value="Clear"/>
-                    <input type="button" value="Convert"/>
-                    <input type="button" value="Copy"/>
+                    <input type="button" value="Clear" id="clear-button"/>
+                    <input type="button" value="Convert" id="convert-button"/>
+                    <input type="button" value="Copy" id="copy-button"/>
                 </div>
                 <div class="lower-wrapper center">
                     <div class="text-wrapper float">
@@ -164,105 +164,105 @@
                                     <th>Code</th>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-0">&nbsp;</td>
+                                    <td id="encode-scheme-char-0">&nbsp;</td>
                                     <td id="encode-scheme-scheme-0">&nbsp;</td>
-                                    <td id="encode-shceme-char-17">&nbsp;</td>
+                                    <td id="encode-scheme-char-17">&nbsp;</td>
                                     <td id="encode-scheme-scheme-17">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-1">&nbsp;</td>
+                                    <td id="encode-scheme-char-1">&nbsp;</td>
                                     <td id="encode-scheme-scheme-1">&nbsp;</td>
-                                    <td id="encode-shceme-char-18">&nbsp;</td>
+                                    <td id="encode-scheme-char-18">&nbsp;</td>
                                     <td id="encode-scheme-scheme-18">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-2">&nbsp;</td>
+                                    <td id="encode-scheme-char-2">&nbsp;</td>
                                     <td id="encode-scheme-scheme-2">&nbsp;</td>
-                                    <td id="encode-shceme-char-19">&nbsp;</td>
+                                    <td id="encode-scheme-char-19">&nbsp;</td>
                                     <td id="encode-scheme-scheme-19">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-3">&nbsp;</td>
+                                    <td id="encode-scheme-char-3">&nbsp;</td>
                                     <td id="encode-scheme-scheme-3">&nbsp;</td>
-                                    <td id="encode-shceme-char-20">&nbsp;</td>
+                                    <td id="encode-scheme-char-20">&nbsp;</td>
                                     <td id="encode-scheme-scheme-20">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-4">&nbsp;</td>
+                                    <td id="encode-scheme-char-4">&nbsp;</td>
                                     <td id="encode-scheme-scheme-4">&nbsp;</td>
-                                    <td id="encode-shceme-char-21">&nbsp;</td>
+                                    <td id="encode-scheme-char-21">&nbsp;</td>
                                     <td id="encode-scheme-scheme-21">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-5">&nbsp;</td>
+                                    <td id="encode-scheme-char-5">&nbsp;</td>
                                     <td id="encode-scheme-scheme-5">&nbsp;</td>
-                                    <td id="encode-shceme-char-22">&nbsp;</td>
+                                    <td id="encode-scheme-char-22">&nbsp;</td>
                                     <td id="encode-scheme-scheme-22">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-6">&nbsp;</td>
+                                    <td id="encode-scheme-char-6">&nbsp;</td>
                                     <td id="encode-scheme-scheme-6">&nbsp;</td>
-                                    <td id="encode-shceme-char-23">&nbsp;</td>
+                                    <td id="encode-scheme-char-23">&nbsp;</td>
                                     <td id="encode-scheme-scheme-23">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-7">&nbsp;</td>
+                                    <td id="encode-scheme-char-7">&nbsp;</td>
                                     <td id="encode-scheme-scheme-7">&nbsp;</td>
-                                    <td id="encode-shceme-char-24">&nbsp;</td>
+                                    <td id="encode-scheme-char-24">&nbsp;</td>
                                     <td id="encode-scheme-scheme-24">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-8">&nbsp;</td>
+                                    <td id="encode-scheme-char-8">&nbsp;</td>
                                     <td id="encode-scheme-scheme-8">&nbsp;</td>
-                                    <td id="encode-shceme-char-25">&nbsp;</td>
+                                    <td id="encode-scheme-char-25">&nbsp;</td>
                                     <td id="encode-scheme-scheme-25">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-9">&nbsp;</td>
+                                    <td id="encode-scheme-char-9">&nbsp;</td>
                                     <td id="encode-scheme-scheme-9">&nbsp;</td>
-                                    <td id="encode-shceme-char-26">&nbsp;</td>
+                                    <td id="encode-scheme-char-26">&nbsp;</td>
                                     <td id="encode-scheme-scheme-26">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-10">&nbsp;</td>
+                                    <td id="encode-scheme-char-10">&nbsp;</td>
                                     <td id="encode-scheme-scheme-10">&nbsp;</td>
-                                    <td id="encode-shceme-char-27">&nbsp;</td>
+                                    <td id="encode-scheme-char-27">&nbsp;</td>
                                     <td id="encode-scheme-scheme-27">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-11">&nbsp;</td>
+                                    <td id="encode-scheme-char-11">&nbsp;</td>
                                     <td id="encode-scheme-scheme-11">&nbsp;</td>
-                                    <td id="encode-shceme-char-28">&nbsp;</td>
+                                    <td id="encode-scheme-char-28">&nbsp;</td>
                                     <td id="encode-scheme-scheme-28">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-12">&nbsp;</td>
+                                    <td id="encode-scheme-char-12">&nbsp;</td>
                                     <td id="encode-scheme-scheme-12">&nbsp;</td>
-                                    <td id="encode-shceme-char-29">&nbsp;</td>
+                                    <td id="encode-scheme-char-29">&nbsp;</td>
                                     <td id="encode-scheme-scheme-29">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-13">&nbsp;</td>
+                                    <td id="encode-scheme-char-13">&nbsp;</td>
                                     <td id="encode-scheme-scheme-13">&nbsp;</td>
-                                    <td id="encode-shceme-char-30">&nbsp;</td>
+                                    <td id="encode-scheme-char-30">&nbsp;</td>
                                     <td id="encode-scheme-scheme-30">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-14">&nbsp;</td>
+                                    <td id="encode-scheme-char-14">&nbsp;</td>
                                     <td id="encode-scheme-scheme-14">&nbsp;</td>
-                                    <td id="encode-shceme-char-31">&nbsp;</td>
+                                    <td id="encode-scheme-char-31">&nbsp;</td>
                                     <td id="encode-scheme-scheme-31">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-15">&nbsp;</td>
+                                    <td id="encode-scheme-char-15">&nbsp;</td>
                                     <td id="encode-scheme-scheme-15">&nbsp;</td>
-                                    <td id="encode-shceme-char-32">&nbsp;</td>
+                                    <td id="encode-scheme-char-32">&nbsp;</td>
                                     <td id="encode-scheme-scheme-32">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td id="encode-shceme-char-16">&nbsp;</td>
+                                    <td id="encode-scheme-char-16">&nbsp;</td>
                                     <td id="encode-scheme-scheme-16">&nbsp;</td>
-                                    <td id="encode-shceme-char-33">&nbsp;</td>
+                                    <td id="encode-scheme-char-33">&nbsp;</td>
                                     <td id="encode-scheme-scheme-33">&nbsp;</td>
                                 </tr>
                             </table>
@@ -272,5 +272,13 @@
                 </div>
             </div>
         </div>
+        <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script src="js/treeNode.js" type="text/javascript"></script>
+        <script src="js/hashMap.js" type="text/javascript"></script>
+        <script src="js/priorityQueue.js" type="text/javascript"></script>
+        <script src="js/huffmanTree.js" type="text/javascript"></script>
+        <script src="js/encoder.js" type="text/javascript"></script>
+        <script src="js/decoder.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
     </body>
 </html>

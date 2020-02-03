@@ -1,71 +1,82 @@
-const top = 0;
-const parent = i => ((i + 1) >>> 1) - 1;
-const left = i => (i << 1) + 1;
-const right = i => (i + 1) << 1;
-
 class PriorityQueue {
-  constructor(comparator = (a, b) => a > b) {
-    this._heap = [];
-    this._comparator = comparator;
+  constructor(data = [], compare = defaultCompare) {
+      this.data = data;
+      this.length = this.data.length;
+      this.compare = compare;
+
+      if (this.length > 0) {
+          for (let i = (this.length >> 1) - 1; i >= 0; i--) this._down(i);
+      }
   }
-  size() {
-    return this._heap.length;
+
+  push(item) {
+      this.data.push(item);
+      this.length++;
+      this._up(this.length - 1);
   }
-  isEmpty() {
-    return this.size() == 0;
-  }
-  peek() {
-    return this._heap[top];
-  }
-  push(...values) {
-    values.forEach(value => {
-      this._heap.push(value);
-      this._siftUp();
-    });
-    return this.size();
-  }
+
   pop() {
-    const poppedValue = this.peek();
-    const bottom = this.size() - 1;
-    if (bottom > top) {
-      this._swap(top, bottom);
-    }
-    this._heap.pop();
-    this._siftDown();
-    return poppedValue;
+      if (this.length === 0) return undefined;
+
+      const top = this.data[0];
+      const bottom = this.data.pop();
+      this.length--;
+
+      if (this.length > 0) {
+          this.data[0] = bottom;
+          this._down(0);
+      }
+
+      return top;
   }
-  replace(value) {
-    const replacedValue = this.peek();
-    this._heap[top] = value;
-    this._siftDown();
-    return replacedValue;
+
+  peek() {
+      return this.data[0];
   }
-  _greater(i, j) {
-    return this._comparator(this._heap[i], this._heap[j]);
+
+  size() {
+      return this.data.length
   }
-  _swap(i, j) {
-    [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
+
+  _up(pos) {
+      const {data, compare} = this;
+      const item = data[pos];
+
+      while (pos > 0) {
+          const parent = (pos - 1) >> 1;
+          const current = data[parent];
+          if (compare(item, current) >= 0) break;
+          data[pos] = current;
+          pos = parent;
+      }
+
+      data[pos] = item;
   }
-  _siftUp() {
-    let node = this.size() - 1;
-    while (node > top && this._greater(node, parent(node))) {
-      this._swap(node, parent(node));
-      node = parent(node);
-    }
-  }
-  _siftDown() {
-    let node = top;
-    while (
-      (left(node) < this.size() && this._greater(left(node), node)) ||
-      (right(node) < this.size() && this._greater(right(node), node))
-    ) {
-      let maxChild = (right(node) < this.size() && this._greater(right(node), left(node))) ? right(node) : left(node);
-      this._swap(node, maxChild);
-      node = maxChild;
-    }
+
+  _down(pos) {
+      const {data, compare} = this;
+      const halfLength = this.length >> 1;
+      const item = data[pos];
+
+      while (pos < halfLength) {
+          let left = (pos << 1) + 1;
+          let best = data[left];
+          const right = left + 1;
+
+          if (right < this.length && compare(data[right], best) < 0) {
+              left = right;
+              best = data[right];
+          }
+          if (compare(best, item) >= 0) break;
+
+          data[pos] = best;
+          pos = left;
+      }
+
+      data[pos] = item;
   }
 }
 
-module.exports = {
-    PriorityQueue
+function defaultCompare(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
 }

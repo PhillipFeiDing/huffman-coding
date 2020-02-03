@@ -25,8 +25,7 @@ public class Encoder {
         // String bitString = "";
         // for (int i = 0; i < message.length(); i++) {
         //     bitString += scheme.get(message.charAt(i));
-        // }
-        // for (int i = 0; i < bitString.length(); i += 8) {
+        /// for (int i = 0; i < bitString.length(); i += 8) {
         //     System.out.print(
         //             bitString.substring(i, Math.min(i + 8, bitString.length()))
         //             + " "

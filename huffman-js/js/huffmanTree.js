@@ -1,7 +1,3 @@
-const {HashMap} = require('./hashMap')
-const {PriorityQueue} = require('./priorityQueue')
-const {TreeNode} = require('./treeNode')
-
 class HuffmanTree {
 
     constructor(input) {
@@ -23,11 +19,25 @@ class HuffmanTree {
             }
         }
         this.dict = dict
-        const pq = new PriorityQueue(TreeNode.compareTo)
+        const pq = new PriorityQueue([], function (self, other) {
+                if (self.count != other.count) {
+                    return self.count - other.count
+                }
+                if (self.symbol === null && other.symbol !== null) {
+                    return 1
+                }
+                if (self.symbol !== null && other.symbol === null) {
+                    return -1
+                }
+                if (self.symbol === null && other.symbol === null) {
+                    return 0
+                }
+                return self.symbol.charCodeAt(0) - other.symbol.charCodeAt(0)
+            }
+        )
         const keySet = this.dict.keySet()
         for (let i = 0; i < keySet.length; i++) {
             const symbol = keySet[i]
-            const count = this.dict.get(symbol)
             pq.push(new TreeNode(symbol, this.dict.get(symbol)))  
         }
         while (pq.size() > 1) {
@@ -58,10 +68,9 @@ class HuffmanTree {
             const s = scheme.get(c)
             let curr = this.root
             for (let i = 0; i < s.length; i++) {
+                let symbol = null
                 if (i === s.length - 1) {
-                    const symbol = c 
-                } else {
-                    const symbol = null
+                    symbol = c 
                 }
                 if (s.charAt(i) === '0') {
                     if (curr.getLeft() === null) {
@@ -102,8 +111,4 @@ class HuffmanTree {
     getFrequencyChart() {
         return this.dict
     }
-}
-
-module.exports = {
-    HuffmanTree
 }

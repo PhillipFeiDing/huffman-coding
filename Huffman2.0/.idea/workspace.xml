@@ -8,6 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa1edf3-5d0a-4614-be1e-da9c2cd952f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Huffman2_0_jar/Huffman2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Huffman2.0/com/phillipfeiding/domain/Encoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Huffman2.0/com/phillipfeiding/domain/Encoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../huffman-js/js/huffmanTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../huffman-js/js/huffmanTree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../huffman-js/js/priorityQueue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../huffman-js/js/priorityQueue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../huffman-js/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../huffman-js/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../huffman-js/js/treeNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/../huffman-js/js/treeNode.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,31 +36,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java">
+        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1144">
-              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+            <state relative-caret-position="577">
+              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2013#2014#0" expanded="true" />
+                <element signature="e#2043#2044#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/AlertBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="186">
+              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="315" column="49" selection-start-line="315" selection-start-column="49" selection-end-line="315" selection-end-column="49" />
+            <state relative-caret-position="2194">
+              <caret line="297" column="33" lean-forward="true" selection-start-line="297" selection-start-column="33" selection-end-line="297" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,8 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/HuffmanTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-417">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="112">
+              <caret line="120" column="31" lean-forward="true" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/fileIO/ByteFileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -91,17 +102,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/TreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="352">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/TreePrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="645">
+              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -118,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/fileIO/FileIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,15 +161,17 @@
         <option value="$PROJECT_DIR$/src/Decoder.java" />
         <option value="$PROJECT_DIR$/src/com/phillipfeiding/fileIO/FileIO.java" />
         <option value="$PROJECT_DIR$/examples/西游记.txt" />
-        <option value="$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java" />
         <option value="$PROJECT_DIR$/src/com/phillipfeiding/gui/AlertBox.java" />
         <option value="$PROJECT_DIR$/src/com/phillipfeiding/gui/ConfirmBox.java" />
         <option value="$PROJECT_DIR$/src/com/phillipfeiding/gui/GUI.java" />
+        <option value="$PROJECT_DIR$/src/com/phillipfeiding/domain/HuffmanTree.java" />
+        <option value="$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java" />
+        <option value="$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="318" />
+    <option name="x" value="254" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="990" />
@@ -241,10 +254,14 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556033675226" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/examples" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -270,10 +287,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Huffman2.0.jar">
+  <component name="RunManager" selected="Application.GUI">
+    <configuration name="Encoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.phillipfeiding.domain.Encoder" />
+      <module name="Huffman2.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.phillipfeiding.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.phillipfeiding.gui.GUI" />
       <module name="Huffman2.0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HuffmanTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.phillipfeiding.domain.HuffmanTree" />
+      <module name="Huffman2.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.phillipfeiding.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -284,8 +327,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.Huffman2.0.jar" />
         <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.Encoder" />
+        <item itemvalue="Application.HuffmanTree" />
+        <item itemvalue="JAR Application.Huffman2.0.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -308,17 +353,21 @@
       <workItem from="1559490559086" duration="2317000" />
       <workItem from="1579889207117" duration="1342000" />
       <workItem from="1579891294414" duration="72000" />
+      <workItem from="1579983958189" duration="647000" />
+      <workItem from="1579984680125" duration="7000" />
+      <workItem from="1580530360699" duration="7084000" />
+      <workItem from="1580697316555" duration="3350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8062000" />
+    <option name="totallyTimeSpent" value="19150000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="23" width="1920" height="990" extended-state="6" />
+    <frame x="-4" y="23" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27635783" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28700745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -337,7 +386,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32962137" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -398,6 +447,12 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/phillipfeiding/gui/GUI.java</url>
+          <line>328</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -439,24 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/fileIO/ByteFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/AlertBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/ConfirmBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -469,28 +510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/fileIO/FileIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="315" column="49" selection-start-line="315" selection-start-column="49" selection-end-line="315" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1144">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        <state relative-caret-position="525">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -499,29 +520,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/HuffmanTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-417">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="112">
+          <caret line="120" column="31" lean-forward="true" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/fileIO/ByteFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="352">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/TreePrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="645">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/ConfirmBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Encoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <folding>
+            <element signature="e#2013#2014#0" expanded="true" />
+            <element signature="e#2043#2044#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/gui/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2194">
+          <caret line="297" column="33" lean-forward="true" selection-start-line="297" selection-start-column="33" selection-end-line="297" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/phillipfeiding/domain/Decoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
