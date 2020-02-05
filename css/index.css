@@ -93,7 +93,7 @@ input[type="button"] {
     margin-right: 7%;
 }
 .table-wrapper {
-    height: 500px;
+    padding-bottom: 10px;
     background: #cccccc;
     border: none;
 }
