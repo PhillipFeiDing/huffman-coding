@@ -21,7 +21,7 @@ input[type="button"]:hover{
 }
 .outer-wrapper {
     margin-top: 10px;
-    width: 75%;
+    width: 1060px;
     background: #dddddd;
 }
 .app-title {
@@ -79,7 +79,7 @@ input[type="button"] {
 }
 .text-wrapper-inner > textarea {
     margin: 2%;
-    height: 500px;
+    height: 300px;
     width: 96%;
     font-size: 18px;
     padding: 10px;
@@ -93,7 +93,7 @@ input[type="button"] {
     margin-right: 7%;
 }
 .table-wrapper {
-    height: 500px;
+    padding-bottom: 10px;
     background: #cccccc;
     border: none;
 }
